@@ -1,7 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -15,13 +14,10 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
-/**
+/**x
  * Models
  */
 const gltfLoader = new GLTFLoader()
-
-const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('/draco/')
 
 const textureLoader = new THREE.TextureLoader()
 
