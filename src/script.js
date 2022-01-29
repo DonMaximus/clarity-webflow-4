@@ -76,7 +76,7 @@ gltfLoader.load(
         gltf.scene.children[1].receiveShadow = true
         
         gltf.scene.children[1].material = letterMaterial
-        gltf.scene.position.set(-0.3, 0.7, 0.1)
+        gltf.scene.position.set(-0.6, 0.8, 0.1)
         gltf.scene.rotation.set(2, 1, 0)
         gltf.scene.scale.set(12, 12, 12)
         scene.add(gltf.scene)
@@ -131,16 +131,16 @@ gltfLoader.load(
     
         //Animation
         gsap.from(gltf.scene.position, {
-            x: 0.4,
-            y: 0.9,
-            z: -0.8,
+            x: 0,
+            y: -2,
+            z: -3,
             duration: 2,
             ease: 'expo',
         })
         gsap.from(gltf.scene.rotation, {
             x: 1,
             y: 1,
-            z: 0.2,
+            z: 3,
             duration: 2,
             ease: 'expo',
         })
@@ -176,9 +176,9 @@ gltfLoader.load(
     
         //Animation
         gsap.from(gltf.scene.position, {
-            x: 4,
+            x: 5,
             y: -1,
-            z: 0.6,
+            z: 2,
             duration: 2,
             ease: 'expo',
         })
@@ -226,9 +226,9 @@ gltfLoader.load(
     
         //Animation
         gsap.from(gltf.scene.position, {
-            x: -1,
-            y: 0.5,
-            z: -0.6,
+            x: 6,
+            y: 2,
+            z: 1,
             duration: 2,
             ease: 'expo',
         })
@@ -275,9 +275,9 @@ gltfLoader.load(
     
         //Animation
         gsap.from(gltf.scene.position, {
-            x: 0.9,
-            y: 0.1,
-            z: -0.4,
+            x: -2,
+            y: -2,
+            z: -1,
             duration: 2,
             ease: 'expo',
         })
@@ -369,14 +369,14 @@ gltfLoader.load(
     
         //Animation
         gsap.from(gltf.scene.position, {
-            x: 4.2,
-            y: 2,
+            x: -2.5,
+            y: 4.5,
             z: -1,
             duration: 2,
             ease: 'expo',
         })
         gsap.from(gltf.scene.rotation, {
-            x: 1.2,
+            x: 2,
             y: 3,
             z: 0,
             duration: 2,
@@ -412,7 +412,7 @@ gltfLoader.load(
 //  */
 // const floor = new THREE.Mesh(
 //     new THREE.PlaneGeometry(10, 10),
-//     new THREE.MeshStandardMaterial({
+//     new THREE. MeshStandardMaterial({
 //         color: '#444444',
 //         metalness: 0,
 //         roughness: 0.5
