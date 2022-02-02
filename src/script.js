@@ -449,11 +449,19 @@ const sizes = {
     height: window.innerHeight
 }
 
+
+// Base camera
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+camera.position.set(2.7, 0.4, 5)
+scene.add(camera)
+
+
 window.addEventListener('resize', () => {
     // Update sizes
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
 
+    
     // Update camera
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
@@ -466,10 +474,6 @@ window.addEventListener('resize', () => {
 /**
  * Camera
  */
-// Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(2.7, 0.4, 3)
-scene.add(camera)
 
 /**
  * Renderer
@@ -503,6 +507,8 @@ const tick = () => {
     // Render
     renderer.render(scene, camera)
 
+    camera.position.z = -(sizes.width/sizes.height) + 9.5
+    console.log(camera.position.z)
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
